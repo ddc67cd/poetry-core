@@ -219,7 +219,7 @@ class Git:
                 folder.as_posix(),
             ]
 
-        args += ["checkout", rev]
+        args += ["checkout", "--recurse-submodules", rev]
 
         return self.run(*args)
 
